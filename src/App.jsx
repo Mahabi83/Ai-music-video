@@ -46,8 +46,7 @@ export default function App() {
     setVideoUrl(null)
     setProgress('Starting…')
 
-    try {
-      const replicate = new Replicate({ auth: apiToken.trim() })
+    
       const audioBase64 = await fileToBase64(audioFile)
       const audioDataUri = `data:${audioFile.type};base64,${audioBase64}`
 
