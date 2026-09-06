@@ -149,8 +149,7 @@ onChange={(e) => {
               <input
                 ref={fileInputRef}
                 type="file"
-                I want you to place accept="audio/*,.mp3,.wav,.m4a" accept="audio/*"
-                onChange={handleFileChange}
+                accept="audio/*,.mp3,.wav,.m4a"
                 className="hidden"
               />
               {audioFile ? (
