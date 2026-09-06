@@ -15,7 +15,7 @@ const MODELS = {
 }
 
 export default function App() {
-  cconst [apiToken, setApiToken] = useState(() => localStorage.getItem('replicate_token') || '')
+  const [apiToken, setApiToken] = useState(() => localStorage.getItem('replicate_token') || '')
   const [audioFile, setAudioFile] = useState(null)
   const [prompt, setPrompt] = useState('')
   const [model, setModel] = useState('wan')
