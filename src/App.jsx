@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import Replicate from 'replicate'
+
 
 const MODELS = {
   wan: {
