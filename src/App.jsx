@@ -15,7 +15,7 @@ const MODELS = {
 }
 
 export default function App() {
-  const [apiToken, setApiToken] = useState(() => localStorage.getItem('replicate_token') || '')
+  cconst [apiToken, setApiToken] = useState(() => localStorage.getItem('replicate_token') || '')
   const [audioFile, setAudioFile] = useState(null)
   const [prompt, setPrompt] = useState('')
   const [model, setModel] = useState('wan')
@@ -126,7 +126,11 @@ export default function App() {
             <input
               type="password"
               value={apiToken}
-  onChange={(e) => {
+onChange={(e) => {
+  const v = e.target.value
+  setApiToken(v)
+  localStorage.setItem('replicate_token', v)
+}}
   const v = e.target.value
   setApiToken(v)
   localStorage.setItem('replicate_token', v)
