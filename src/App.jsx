@@ -72,7 +72,20 @@ export default function App() {
       }
 
       setProgress('Generating video… (30-90s)')
-      const output = await replicate.run(MODELS[model].id, { input })
+              const res = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          token: apiToken.trim(),
+          model: MODELS[model].id,
+          input,
+        }),
+      })
+
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error || 'Generation failed')
+
+      const output = data.output
 
       let url = typeof output === 'string' ? output
         : Array.isArray(output) ? output[0]
