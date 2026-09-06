@@ -128,7 +128,7 @@ export default function App() {
               value={apiToken}
 onChange={(e) => {
   const v = e.target.value
-  setApiToken(v)
+  accept="audio/*,.mp3,.wav,.m4a"setApiToken(v)
   localStorage.setItem('replicate_token', v)
 }}
   
