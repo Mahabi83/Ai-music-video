@@ -128,7 +128,7 @@ export default function App() {
               value={apiToken}
 onChange={(e) => {
   const v = e.target.value
-  accept="audio/*,.mp3,.wav,.m4a"setApiToken(v)
+  setApiToken(v)
   localStorage.setItem('replicate_token', v)
 }}
   
@@ -149,7 +149,7 @@ onChange={(e) => {
               <input
                 ref={fileInputRef}
                 type="file"
-                accept="audio/*"
+                I want you to place accept="audio/*,.mp3,.wav,.m4a" accept="audio/*"
                 onChange={handleFileChange}
                 className="hidden"
               />
