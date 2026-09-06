@@ -126,7 +126,11 @@ export default function App() {
             <input
               type="password"
               value={apiToken}
-              onChange={(e) => {
+  onChange={(e) => {
+  const v = e.target.value
+  setApiToken(v)
+  localStorage.setItem('replicate_token', v)
+}}
   const v = e.target.value
   setApiToken(v)
   localStorage.setItem('replicate_token', v)
