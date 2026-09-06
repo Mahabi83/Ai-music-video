@@ -150,7 +150,7 @@ onChange={(e) => {
                 ref={fileInputRef}
                 type="file"
                 accept="audio/*,.mp3,.wav,.m4a"
-            onChange={handleFileChange} right there
+            onChange={handleFileChange} 
               />
               {audioFile ? (
                 <div className="text-sm">
